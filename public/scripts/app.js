@@ -22,13 +22,13 @@ $(document).ready(function() {
   //$('#albums').on('click', '.add-song', handleAddSongClick);
 
 
-  $('#albums').on('click', '.add-song', function(e) {
-     var id= $(this).parents('.album').data('album-id'); // "5665ff1678209c64e51b4e7b"
-  });
+  $('#albums').on('click', '.add-song', handleAddSongClick);
+    // var id= $(this).closest('.album').data('album-id'); // "5665ff1678209c64e51b4e7b"
 
 
   // save song modal save button
   $('#saveSong').on('click', handleNewSongSubmit);
+
 });
 
 function renderMultipleAlbums(albums) {
