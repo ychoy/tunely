@@ -6,6 +6,7 @@ var AlbumSchema = new Schema({
   artistName: String,
   name: String,
   releaseDate: String,
+  imageUrl: String,
   genres: [ String ],
   songs: [Song.schema]
 });

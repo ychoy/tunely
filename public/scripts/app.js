@@ -131,7 +131,7 @@ function renderAlbum(album) {
           <!-- begin album internal row -->
             <div class='row'>
               <div class="col-md-3 col-xs-12 thumbnail album-art">
-                <img src="images/800x800.png" alt="album image">
+                <img src="${album.imageUrl}" alt="album image">
               </div>
               <div class="col-md-9 col-xs-12">
                 <ul class="list-group">
