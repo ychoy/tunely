@@ -4,8 +4,6 @@
 
 var db = require('../models');
 
-
-
 // GET /api/albums
 function index(req, res) {
   // send back all albums as JSON
@@ -44,7 +42,10 @@ function show(req, res) {
 // DELETE /api/albums/:albumId
 function destroy(req, res) {
   // find one album by id, delete it, and send it back as JSON
-}
+  db.Album.findOneAndRemove({ _id: req.params.albumId }, function (err, deletedAlbum) {
+      res.json(deletedAlbum);
+  });
+};
 
 // PUT or PATCH /api/albums/:albumId
 function update(req, res) {
